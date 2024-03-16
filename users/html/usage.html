@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage</title>
+    <link rel="stylesheet" href="User.css">
+    <link rel="stylesheet" href="Add.css">
+</head>
+
+<body>
+    <div class="fulle">
+        <div class="box">
+            <h2>Add Usage</h2>
+            <div>
+                <h1><button id="ok">&plus;</button></h1>
+            </div>
+        </div>
+    </div>
+    <div class="tot">
+        <div class="addf">
+            <div class="hea">
+                <h3>Enter Details</h3>
+            </div>
+            <div class="det">
+                <div class="loc">
+                    <label for="waterWorks">Choose a water usage work:</label>
+                    <select id="waterWorks" name="waterWorks" onchange="showInput()">
+                        <option value="drinking">Drinking</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="wateringPlants">Watering Plants</option>
+                        <option value="showering">Showering</option>
+                        <option value="washingHands">Washing Hands</option>
+                        <option value="dishwashing">Dishwashing</option>
+                        <option value="laundry">Laundry</option>
+                        <option value="flushingToilet">Flushing Toilet</option>
+                        <option value="wateringPets">Watering Pets</option>
+                        <option value="carWashing">Car Washing</option>
+                        <option value="foodPreparation">Food Preparation</option>
+                        <option value="hobbies">Hobbies (e.g., Painting or Pottery)</option>
+                        <option value="cleaningSurfaces">Cleaning Surfaces</option>
+                        <option value="boilingWater">Boiling Water</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="fillingWaterBottles">Filling Water Bottles</option>
+                        <option value="moppingFloors">Mopping Floors</option>
+                        <option value="wateringLawn">Watering Lawn</option>
+                        <option value="steamIroning">Steam Ironing</option>
+                        <option value="hydrotherapy">Hydrotherapy</option>
+                        <option value="aquariumMaintenance">Aquarium Maintenance</option>
+                        <option value="childrensWaterPlay">Children's Water Play</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                <div class="vis">
+                    <label for="otherWork">Specify other work:</label>
+                    <input type="text" id="otherWork" name="otherWork" placeholder="Purpose of Use">
+                </div>
+                <div class="loc">
+                    <div>
+                        <label for="wateruse">Enter Amount of Water is used:</label>
+                    </div>
+                    <div>
+                        <input type="number" id="wateruse" placeholder="8 or 8000">
+                        <select id="waterunit" name="wateruni">
+                            <option value="ml">ml</option>
+                            <option value="l">l</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="buto">
+                <button id="ok1">Upload</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="usage.js"></script>
+
+</html>

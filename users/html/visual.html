@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      #myPlot1 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myPlot1">
+      <div id="myPlot" style="width: 100%; max-width: 700px"></div>
+    </div>
+    <script>
+      fetch('/fall')
+    .then((res) => res.json())
+    .then((responseData) => {
+        if (responseData.success) {
+            const x = responseData.day;
+            const y = responseData.user;
+            console.log(x, y);
+            const plotData = [{ x: x, y: y, mode: 'lines' }];
+            const layout = {
+                title: 'User Data Plot',
+                xaxis: {
+                    title: 'Day' 
+                },
+                yaxis: {
+                    title: 'Usage in l' 
+                }
+            };
+            Plotly.newPlot('myPlot', plotData, layout);
+        } else {
+            alert('Failed to fetch data');
+        }
+    });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scan.css">
+    <title>Barcode scanner for product details
+    </title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Scan the Bar Code</h1>
+            <div class="section">
+                <div id="my-qr-reader">
+                </div>
+            </div>
+        </div>
+        <div class="c2">
+            <div class="c3">
+                <label for="barcode">barcode:</label>
+                <input type="text" id="barcode" name="barcode" disabled>
+                <label for="name">Product Name:</label>
+                <input type="text" id="name" name="productName" required>
+                <label for="brand">Brand Name:</label>
+                <input type="text" id="brand" name="productName" required>
+                <label for="min">Min Value:</label>
+                <input type="number" id="min" name="minValue" required>
+                <label for="max">Max Value:</label>
+                <input type="number" id="max" name="maxValue" required>
+                <label for="unit">Unit of Water:</label>
+                <select id="unit" name="unitOfWater" required>
+                    <option value="">Select Unit</option>
+                    <option value="l">Liters(l)</option>
+                    <option value="ml">Milli Liters(ml)</option>
+                    <option value="cm">Cubic Meters(cm)</option>
+                </select>
+                <button id="ok">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="scan.js"></script>
+</body>
+</html>

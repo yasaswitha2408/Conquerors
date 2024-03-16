@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scan.css">
+    <title>Barcode scanner for product details
+    </title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Scan the Bar Code</h1>
+            <div class="section">
+                <div id="my-qr-reader">
+                </div>
+            </div>
+        </div>
+        <div class="c2">
+            <div class="c3">
+                <label for="barcode">barcode:</label>
+                <input type="text" id="barcode" name="barcode" disabled>
+                <label for="min">Quantity:</label>
+                <input type="number" id="min" name="minValue" required placeholder="Enter the Quantity">
+                <button id="ok">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="uscan.js"></script>
+</body>
+</html>
